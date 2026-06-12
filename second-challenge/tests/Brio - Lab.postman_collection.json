@@ -1,0 +1,175 @@
+{
+  "info": {
+    "_postman_id": "acc7c046-fbcc-458d-ac06-79a2f7532032",
+    "name": "Brio - Lab",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "41769872"
+  },
+  "item": [
+    {
+      "name": "Criar um cliente com sucesso",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"nome\": \"Bob Esponja\",\r\n  \"telefone\": \"(54) 99988-7766\",\r\n  \"email\": \"bob@email.com\",\r\n  \"especialidade\": \"Marketing Digital\",\r\n  \"principal_desafio\": \"Gerar mais leads\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/api/v1/cliente",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "v1",
+            "cliente"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Criar cliente sem JSON",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/api/v1/cliente",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "v1",
+            "cliente"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Criar cliente com email inválido",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"nome\": \"João Silva\",\r\n    \"telefone\": \"11 99999-8888\",\r\n    \"email\": \"email_invalido\",\r\n    \"especialidade\": \"Python\",\r\n    \"principal_desafio\": \"Aprender Flask\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/api/v1/cliente",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "v1",
+            "cliente"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Criar cliente com telefone inválido",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"nome\": \"Patrick Estrela do Mar\",\r\n  \"telefone\": \"54999887886\",\r\n  \"especialidade\": \"SEO\",\r\n  \"principal_desafio\": \"Melhorar ranking\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/api/v1/cliente",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "v1",
+            "cliente"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Criar cliente faltando um campo",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"nome\": \"Teste\",\r\n    \"telefone\": \"1199999999\",\r\n    \"email\": \"teste@gmail.com\",\r\n    \"principal_desafio\": \"Teste\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/api/v1/cliente",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "v1",
+            "cliente"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
