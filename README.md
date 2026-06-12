@@ -2,34 +2,24 @@
 
 Este repositório contém a implementação dos dois desafios propostos pela Brio Lab para a vaga de Desenvolvedor(a) de Automação & IA.
 
-# Desafio 1 - Orquestração com N8N
+# 🛠️ Desafio 1 - Orquestração com n8n
 
 ## Objetivo
-Construir um fluxo automatizado capaz de detectar a aprovação de uma tarefa, processar sua legenda utilizando Inteligência Artificial, persistir os resultados em banco de dados e notificar o responsável pela publicação.
+Desenvolver um fluxo de automação utilizando [n8n](https://n8n.io/) para monitorar tarefas aprovadas no [ClickUp](https://clickup.com), processar automaticamente suas legendas com Inteligência Artificial para geração de hashtags, armazenar os resultados em um banco de dados e notificar o responsável pela publicação, eliminando etapas manuais do processo.
 
 ## Fluxo
+| Etapa | Descrição |
+| :--- | :--- |
+| **ClickUp Trigger** | Monitora alterações em tempo real nas tarefas do ClickUp |
+| **Filtro de Status** | Processa apenas tarefas com status Aprovada |
+| **Obtenção da Tarefa** | Recupera os dados completos da tarefa via API do ClickUp |
+| **Tratamento dos Dados** | Extrai e organiza os campos necessários para o processamento |
+| **Geração de Hashtags com IA** | Utiliza o [Google Gemini](https://ai.google.dev/) para gerar hashtags com base na legenda |
+| **Structured Output Parser** | Padroniza o retorno da IA em formato estruturado |
+| **Persistência dos Dados** | Salva os resultados processados no [Supabase](https://supabase.com/) |
+| **Notificação** | Envia um e-mail com a confirmação do processamento |
 
-### 1.ClickUp Trigger
-- Monitora alterações nas tarefas do ClickUp;
-- Sempre que uma tarefa é atualizada, o evento é enviado para o N8N.
-### 2.Filtro de Status
-- Verifica se a tarefa foi movida para o status "Aprovada";
-- Garante que apenas conteúdos aprovados sejam processados.
-### 3.Obtenção dos Dados da Tarefa
-- Recupera as informações completas da tarefa aprovada através da API do ClickUp.
-### 4.Tratamento dos Dados
-- Extrai apenas os campos necessários para o processamento;
-- Organiza os dados em uma estrutura padronizada para as próximas etapas.
-### 5.Geração de Hashtags com IA
-- Utiliza o Google Gemini para analisar a legenda da publicação;
-- Gera hashtags relevantes para Instagram com base no conteúdo fornecido;
-- Utiliza um Structured Output Parser para garantir um retorno estruturado e consistente.
-### 6.Persistência dos Dados
-- Armazena as informações processadas e as hashtags geradas em uma tabela no Supabase.
-### 7.Notificação
-- Envia uma notificação por e-mail utilizando o Gmail;
-- Informa a conclusão do processamento e apresenta as hashtags sugeridas pela IA.
-
+## Demonstração do Fluxo no n8n
 
 # Desafio 2 - Backend com Python
 
